@@ -1,6 +1,5 @@
-import { jsx } from '@emotion/react';
 import React, { StrictMode } from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
 import { setUpStore } from '@/store';

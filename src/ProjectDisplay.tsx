@@ -1,6 +1,6 @@
-import { jsx } from '@emotion/react';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react';
 import React from 'react';
-import { css } from '@emotion/react';
 import { Button } from '@mui/material';
 
 import { useGetProjectsQuery } from '@/service/api';

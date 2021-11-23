@@ -21,7 +21,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier', '@emotion'],
   rules: {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
@@ -34,6 +34,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    '@emotion/jsx-import': 'error',
   },
   overrides: [
     {
