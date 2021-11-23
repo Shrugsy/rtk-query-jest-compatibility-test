@@ -33,8 +33,19 @@ describe('App test', () => {
     await screen.findByText(/2021-04-01/i);
   });
 
-  it('Loads a project with jest fake timers', async () => {
-    jest.useFakeTimers();
+  it('Loads a project with jest fake timers (legacy)', async () => {
+    jest.useFakeTimers('legacy');
+    // [SETUP] - set up app
+    setUpApp();
+
+    // [ASSERT] - eventually loads projects
+    screen.getByText(/projects:/i);
+    await screen.findByText(/Successfully fetched projects!/i);
+    await screen.findByText(/2021-04-01/i);
+  });
+
+  it('Loads a project with jest fake timers (modern)', async () => {
+    jest.useFakeTimers('modern');
     // [SETUP] - set up app
     setUpApp();
 
