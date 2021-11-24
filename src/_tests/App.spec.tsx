@@ -1,11 +1,10 @@
 import React, { StrictMode } from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 
-import { setUpStore } from '@/store';
-import { createHandlers } from '@/_mocks/handlers';
-
+import { setUpStore } from '../store';
 import App from '../App';
+import { createHandlers } from '../_mocks/handlers';
 
 import { mswTestServer } from './__setup__';
 

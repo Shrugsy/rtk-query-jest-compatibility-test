@@ -8,6 +8,8 @@ type Project = {
   assignees: number[];
 };
 
+const baseURL = window.location.origin;
+
 /**
  * Creates MSW handlers with scoped data
  */
@@ -27,7 +29,7 @@ export function createHandlers() {
   }
 
   const projectsHandlers = [
-    rest.get('/api/projects', (req, res, ctx) => {
+    rest.get(`${baseURL}/api/projects`, (req, res, ctx) => {
       return res(ctx.delay(600), ctx.json(Object.values(state.entities)));
     }),
   ];

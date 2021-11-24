@@ -3,10 +3,10 @@ import { jsx, css } from '@emotion/react';
 import React from 'react';
 import { Button } from '@mui/material';
 
-import { useGetProjectsQuery } from '@/service/api';
+import { useGetProjectsQuery } from './service/api';
 
 export function ProjectDisplay() {
-  const { data, isFetching, isError, isSuccess, refetch } = useGetProjectsQuery();
+  const { data, isFetching, isError, isSuccess, refetch, error } = useGetProjectsQuery();
 
   return (
     <>
