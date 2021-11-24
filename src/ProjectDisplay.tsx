@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import { useGetProjectsQuery } from './service/api';
 
 export function ProjectDisplay() {
-  const { data, isFetching, isError, isSuccess, refetch, error } = useGetProjectsQuery();
+  const { data, isFetching, isError, isSuccess, refetch } = useGetProjectsQuery();
 
   return (
     <>
